@@ -10,15 +10,15 @@ Similarly to the run-level `nutella.init`, this method allows developers to init
 nutella.f.parse_component_args(args)
 nutella.f.parseURLParameters()`
 ```
-Returns the `broker_hostname` as parsed from the command line or the URL query parameters. See the [run-level equivalent]().
+Returns the `broker_hostname` as parsed from the command line or the URL query parameters. See the [run-level equivalent](core.md).
 
 ```
 nutella.f.extract_component_id()
 ```
-See the [run-level equivalent]().
+See the [run-level equivalent](core.md).
 
 ```
 nutella.f.set_resource_id( resource_id )
 nutella.f.setResourceId(resourceId)
 ```
-See the [run-level equivalent]().
+See the [run-level equivalent](core.md).

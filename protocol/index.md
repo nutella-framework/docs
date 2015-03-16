@@ -4,7 +4,7 @@ The nutella protocol is designed to be modular with a core and several modules t
 
 **Note 1: At the moment of writing we are looking to fully support Ruby ([nutella_lib.rb](https://github.com/nutella-framework/nutella_lib.rb)), JavaScript ([nutella_lib.js](https://github.com/nutella-framework/nutella_lib.js)) and Swift ([nutella_lib.swift](https://github.com/nutella-framework/nutella_lib.swift))** 
 
-_Note 2: Many portions of this specification are not yet finalized so take the whole thing with a grain of salt_
+**Note 2: Many portions of this specification are not yet finalized so take the whole thing with a grain of salt**
 
 ## Run-level APIs
 These are the APIs are implemented by `nutella_lib.*` and are used for almost everything when designing a new nutella application. They are capable of handling the communication between run-level components (i.e. regular components) and interact with framework level functions, such as logging and location.
