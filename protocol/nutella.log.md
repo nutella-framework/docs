@@ -16,6 +16,7 @@ nutella.log.info('Something happened here!', 12345);
 what will happen is that: first, my console will look something like this
 
 [[image_console_log.png | height = 80px]]
+![Image | height = 80px](image_console_log.png?raw=true)
 
 and a message will be published to the `logs` channel that looks something like this
 ```json
