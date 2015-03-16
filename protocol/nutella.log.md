@@ -15,7 +15,7 @@ nutella.log.info('Something happened here!', 12345);
 ```
 what will happen is that: first, my console will look something like this
 
-![Image | height = 80px](images/image_console_log.png?raw=true)
+<img src="images/image_console_log.png" height="80px">
 
 and a message will be published to the `logs` channel that looks something like this
 ```json
@@ -28,4 +28,4 @@ and a message will be published to the `logs` channel that looks something like 
 
 Finally, Whenever you are printing to a Command Line Interface it would be nice to follow this color scheme.
 
-![Image | height = 100px](images/image_logs_colors.png?raw=true)
+<img src="images/image_logs_colors.png" height="100px">
