@@ -7,7 +7,7 @@ nutella.f.init( broker_hostname, component_id )
 Similarly to the run-level `nutella.init`, this method allows developers to initialize a framework level component. Some utility methods are provided to assist with the retrieval/parising of `broker_hostname` and `component_id`. 
 
 ```
-nutella.f.parse_component_args(args)
+nutella.f.parse_args(args)
 nutella.f.parseURLParameters()`
 ```
 Returns the `broker_hostname` as parsed from the command line or the URL query parameters. See the [run-level equivalent](core.md).

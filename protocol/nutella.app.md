@@ -7,7 +7,7 @@ nutella.app.init( broker_hostname, app_id, component_id )
 Similarly to the run-level `nutella.init`, this method allows to initialize an application level component. Some utility methods are provided to assist with the retrieval/parising of `broker_hostname`, `app_id` and `component_id`. 
 
 ```
-nutella.app.parse_component_args(args)
+nutella.app.parse_args(args)
 nutella.app.parseURLParameters()`
 ```
 Returns the `broker_hostname` and `app_id` as parsed from the command line or the URL query parameters. See the [run-level equivalent](core.md).
