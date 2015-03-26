@@ -42,3 +42,13 @@ Key - value pairs access (read/write):
 ` nutella.location.resource['rid'].parameters `
 
 ` nutella.location.resource['rid'].parameter['key'] `
+
+Receive update when the resource change
+
+` nutella.location.resource['rid'].notifyUpdate ` set true for receiving update on the status of the resource
+
+Receive update when a dynamic resource enter/exit the range
+
+` nutella.location.resource['rid'].enterUpdate ` set true for receiving update when a resource enter in the range
+
+` nutella.location.resource['rid'].exitUpdate ` set true for receiving update when a resource exit the range
