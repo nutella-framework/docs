@@ -1,6 +1,7 @@
 # Core application-level nutella APIs
 Similartly to run-level core APIs, these app-level core APIs handle the initialization of application-level components. If you are familiar with run-level APIs you'll find application-level APIs pretty intuitive to understand.
 
+## `init`
 ```
 nutella.app.init( broker_hostname, app_id, component_id )
 ```
@@ -17,6 +18,7 @@ nutella.app.extract_component_id()
 ```
 See the [run-level equivalent](core.md).
 
+## Set resource ID`
 ```
 nutella.app.set_resource_id( resource_id )
 nutella.app.setResourceId(resourceId)
