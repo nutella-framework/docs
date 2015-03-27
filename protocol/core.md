@@ -1,7 +1,7 @@
 # Core run-level nutella APIs
 The core nutella API allows developers to configure a set of parameters that are used by all the other protocol modules withing a certain component.
 
-
+## `init`
 ```
 nutella.init( broker_hostname, app_id, run_id, component_id )
 ```
@@ -25,7 +25,7 @@ The `broker_hostname`, `app_id` and `run_id` are passed to the interface as quer
 Similarly to web interfaces, the `broker_hostname`, `app_id` and `run_id` are passed to the interface as [custom URL scheme](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1) query parameters either by the nutella main interface or by RoomCast. `component_id` is hard-coded by the developers in their component code.
 
 
-
+## `Set resource ID`
 ```
 nutella.set_resource_id( resource_id ) # for us Ruby lovers
 
