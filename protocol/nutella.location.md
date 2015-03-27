@@ -39,7 +39,7 @@ Proximity tracking system with discrete base station (read only):
 
 Key - value pairs access (read/write):
 
-` nutella.location.resource['rid'].parameters `
+` nutella.location.resource['rid'].parameters ` list of all the keys of parameters
 
 ` nutella.location.resource['rid'].parameter['key'] `
 
