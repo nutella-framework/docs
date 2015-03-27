@@ -11,18 +11,20 @@ These are the APIs are implemented by `nutella_lib.*` and are used for almost ev
 * [nutella](core.md) Core module
 * [nutella.net](nutella.net.md) Communication module
 * [nutella.log](nutella.log.md) Logging module
-* [nutella.persist](nutella.persist.md) Bots persistence module.
+* [nutella.persist](nutella.persist.md) Persistence module. **(bots only)**
 * [nutella.location](nutella.location.md) Location module (a.k.a. RoomPlaces)
 
 ## Application-level APIs
 Application-level APIs are used by application-level components, that is the components that are shared among all the runs in a certain application. These APIs also ship with `nutella_lib.*` and are available to nutella application designers that need to implement application level components.
 * [nutella.app](nutella.app.md) Application-level core module
 * [nutella.app.net](nutella.app.net.md) Application-level communication module
-* ...
+* [nutella.app.log](nutella.app.log.md) Application-level logging module
+* [nutella.app.persist](nutella.app.persist.md) Application-level persistence module. **(bots only)**
 
 ## Framework-level APIs
 Framework level APIs are used by framework-level components. They don't ship in `nutella_lib.*` but, instead, are "buried" inside the nutella framework. The reason for this is that only designers of framework level components should care and be able to use them.
 * [nutella.f](nutella.f.md) Framework-level core module
 * [nutella.f.net](nutella.f.net.md) Framework-level communication module
-* ...
+* [nutella.f.log](nutella.f.log.md) Framework-level logging module
+* [nutella.f.persist](nutella.f.persist.md) Framework-level persistence module. **(bots only)**
 
