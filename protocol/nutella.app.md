@@ -18,7 +18,7 @@ nutella.app.extract_component_id()
 ```
 See the [run-level equivalent](core.md).
 
-## Set resource ID`
+## Set resource ID
 ```
 nutella.app.set_resource_id( resource_id )
 nutella.app.setResourceId(resourceId)
