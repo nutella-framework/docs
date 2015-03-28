@@ -6,7 +6,7 @@ The nutella protocol is designed to be modular with a core and several modules t
 
 **Note 2: Many portions of this specification are not yet finalized so take the whole thing with a grain of salt**
 
-## Run-level APIs
+## Run-level APIs (for beginners and most of us)
 These are the APIs are implemented by `nutella_lib.*` and are used for almost everything when designing a new nutella application. They are capable of handling the communication between run-level components (i.e. regular components) and interact with framework level functions, such as logging and location.
 * [nutella](core.md) Core module
 * [nutella.net](nutella.net.md) Communication module
@@ -14,14 +14,14 @@ These are the APIs are implemented by `nutella_lib.*` and are used for almost ev
 * [nutella.persist](nutella.persist.md) Persistence module. **(bots only)**
 * [nutella.location](nutella.location.md) Location module (a.k.a. RoomPlaces)
 
-## Application-level APIs
+## Application-level APIs (for intermediate users)
 Application-level APIs are used by application-level components, that is the components that are shared among all the runs in a certain application. These APIs also ship with `nutella_lib.*` and are available to nutella application designers that need to implement application level components.
 * [nutella.app](nutella.app.md) Application-level core module
 * [nutella.app.net](nutella.app.net.md) Application-level communication module
 * [nutella.app.log](nutella.app.log.md) Application-level logging module
 * [nutella.app.persist](nutella.app.persist.md) Application-level persistence module. **(bots only)**
 
-## Framework-level APIs
+## Framework-level APIs (for ninjas and framework contributors)
 Framework level APIs are used by framework-level components. They don't ship in `nutella_lib.*` but, instead, are "buried" inside the nutella framework. The reason for this is that only designers of framework level components should care and be able to use them.
 * [nutella.f](nutella.f.md) Framework-level core module
 * [nutella.f.net](nutella.f.net.md) Framework-level communication module
