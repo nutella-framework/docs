@@ -17,7 +17,7 @@ what will happen is that: first, my console will look something like this
 
 <img src="images/image_console_log.png" height="80px">
 
-and a message will be published to the `logs` channel that looks something like this
+and a message will be published to the `logging` run-level channel (a.k.a. `/nutella/apps/app_id/runs/run_id/logging`) that looks something like this
 ```json
 {
     "type": "info",
