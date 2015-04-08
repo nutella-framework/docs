@@ -25,6 +25,8 @@ Discrete tracking system:
 
 Proximity tracking system with continous base station:
 
+` nutella.location.resource['rid'].proximity.rid `
+
 ` nutella.location.resource['rid'].proximity.continuous.x `
 
 ` nutella.location.resource['rid'].proximity.continuous.y `
@@ -33,9 +35,9 @@ Proximity tracking system with discrete base station (read only):
 
 ` nutella.location.resource['rid'].proximity.rid `
 
-` nutella.location.resource['rid'].proximity.continuous.x `
+` nutella.location.resource['rid'].proximity.discrete.x `
 
-` nutella.location.resource['rid'].proximity.continuous.y `
+` nutella.location.resource['rid'].proximity.discrete.y `
 
 Key - value pairs access (read/write):
 
