@@ -54,3 +54,11 @@ Receive update when a dynamic resource enter/exit the range
 ` nutella.location.resource['rid'].notifyEnter ` set true for receiving update when a resource enter in the range
 
 ` nutella.location.resource['rid'].notifyExit ` set true for receiving update when a resource exit the range
+
+Callback functions for receiving notifications
+
+` nutella.location.resourceUpdated(function(resource) {}) ` called whena a resource is updated (you need to enable the update of that resource first
+
+` nutella.location.resourceEntered(function(dynamicResource, staticResource) {}) ` called whena a dynamic resource enters in a static resource range
+
+` nutella.location.resourceExited(function(dynamicResource, staticResource) {}) ` called whena a dynamic resource exits in a static resource range
