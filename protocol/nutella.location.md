@@ -61,7 +61,7 @@ Callback functions for receiving notifications
 
 ` nutella.location.resourceEntered(function(dynamicResource, staticResource) {}) ` called when a dynamic resource enters in a static resource range
 
-` nutella.location.resourceExited(function(dynamicResource, staticResource) {}) ` called when a dynamic resource exits in a static resource range
+` nutella.location.resourceExited(function(dynamicResource, staticResource) {}) ` called when a dynamic resource exits a static resource range
 
 Callback function called when location module is ready
 
