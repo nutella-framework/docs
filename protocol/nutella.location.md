@@ -51,9 +51,9 @@ Receive update when the resource change
 
 Receive update when a dynamic resource enter/exit the range
 
-` nutella.location.resource['rid'].notifyEnter ` set true for receiving update when a resource enter in the range
+` nutella.location.resource['rid'].notifyEnter ` set true on the static resource for receiving update when a dynamic resource enter in the range
 
-` nutella.location.resource['rid'].notifyExit ` set true for receiving update when a resource exit the range
+` nutella.location.resource['rid'].notifyExit ` set true on the static resource for receiving update when a dynamic resource exit the range
 
 Callback functions for receiving notifications
 
