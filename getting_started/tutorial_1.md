@@ -18,4 +18,12 @@ To run the newly created app:
 cd crepe
 nutella start
 ```
+You'll get a message like this
+```
+Application crepe started!
+Application is running on broker: localhost
+Do `tmux attach-session -t crepe/default` to monitor your bots.
+Go to http://localhost:57880/crepe/default to access your interfaces
+```
+
 Open your web browser and go to `http://localhost:57880/crepe/default` to see the main interface for the app
