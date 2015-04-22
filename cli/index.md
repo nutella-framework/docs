@@ -1,4 +1,4 @@
-# nutella command line interface reference
+# Command line utility reference
 The nutella command line interface is used to create, run and interact with nutella projects. The general syntax to do this is: `nutella <command> <parameters>`. In this page we are going to provide a detailed description of all available commands available in nutella.
 
 ## Commands
