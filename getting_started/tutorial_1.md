@@ -10,7 +10,6 @@ This will create a new folder called `crepe` with all of the files and folders t
 bots          # folder for all the bots (a.k.a. the backend)
 interfaces    # folder for all the interfaces (a.k.a. the frontend)
 nutella.json  # nutella project file containing your project name, version and description
-.meteor               
 ```
 To run the newly created app:
 
