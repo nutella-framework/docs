@@ -3,6 +3,7 @@ This repository contains all the documentation relative to the nutella framework
 # Framework users
 * *[installing the framework](getting_started/index.md)* Guide to framework installation
 * *[create your first app tutorial](getting_started/tutorial_1.md)* Tutorial that explains how to create your first nutella application.
+* *[command line utility reference](https://github.com/nutella-framework/docs/blob/master/cli/index.md)* Complete description of the `nutella` command line utility
 
 # Framework developers
 * *[How can I contribute?](contribute/index.md)* Explains all you need to know to get started developing the framework.
