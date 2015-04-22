@@ -1,4 +1,4 @@
-# nutella protocol and APIs
+# Communication protocol and APIs
 
 The nutella protocol is designed to be modular with a core and several modules that implement specific functionalities. This page describes the nutella protocol together with some guidelines for designing language-specific libraries that implement the protocol. It's important to point out that each language specific nutella library, should follow the style and the conventions that are customary in that specific language while striving to implement all the APIs outlined here and maintaining consistency across languages.
 
