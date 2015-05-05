@@ -28,4 +28,4 @@ Go to http://localhost:57880/crepe/default to access your interfaces
 Open your web browser and go to `http://localhost:57880/crepe/default` to see the main interface for the app
 
 
-[NEXT :arrow_forward:](tutorial_2.md)
+[PREV :arrow_backward:](index.md) [NEXT :arrow_forward:](tutorial_2.md)
