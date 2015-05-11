@@ -1,4 +1,4 @@
-# Creating your first app (instant gratification)
+# Creating your first macroworld app (a.k.a. instant gratification)
 
 To create a nutella app, open your terminal and type:
 ```
