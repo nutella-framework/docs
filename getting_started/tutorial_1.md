@@ -2,7 +2,7 @@
 
 To create a nutella app, open your terminal and type:
 ```
-nutella new my_macroworld_app
+$ nutella new my_macroworld_app
 ```
 This will create a new folder called `my_macroworld_app` with all of the files and folders that a nutella app needs:
 
@@ -14,8 +14,8 @@ nutella.json  # nutella project file containing your project name, version and d
 To run the newly created app:
 
 ```
-cd my_macroworld_app
-nutella start
+$ cd my_macroworld_app
+$ nutella start
 ```
 You'll get a message like this
 ```
@@ -31,8 +31,8 @@ So many buttons! :) Each one of them is a GUI that will help you during the deve
 
 If you are wondering: "How do I stop this application thing now?" the answer is as easy as 
 ```
-nutella stop
-``` 
+$ nutella stop
+```
 
 Congratulations! You just created and started your first nutella application. 
 
