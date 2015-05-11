@@ -1,7 +1,7 @@
 
 # Create interface (front-end)
 
-<img src="images/dev_process_3.png" width="200" align="left">
+<img src="images/dev_process_3.png" width="200" align="right">
 
 
 

@@ -1,7 +1,7 @@
 
 # Deploy in classroom(s)
 
-<img src="images/dev_process_6.png" width="200" align="left">
+<img src="images/dev_process_6.png" width="200" align="right">
 
 
 

@@ -17,7 +17,7 @@ This description of the activity is a bit vague on purpose. Often, when creating
 # Building macroworlds with nutella
 Under the hood, macroworlds are similar to simulations and, like simulations, they can be about a range of different topics. No matter what the topic is, macroworlds "life-cycle" can be summarized by the flowchart below.
 
-<img src="images/dev_process.png" width="300" >
+<img src="images/dev_process.png" width="300" align="center">
 
 In the rest of the tutorial we will see how to build the Hunger Games macroworld application going through each one of the steps in the flowchart. Let's start!
 

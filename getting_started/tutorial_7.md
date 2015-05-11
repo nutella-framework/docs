@@ -1,7 +1,7 @@
 
 # Create channels and packages
 
-<img src="images/dev_process_5.png" width="200" align="left">
+<img src="images/dev_process_5.png" width="200" align="right">
 
 
 
