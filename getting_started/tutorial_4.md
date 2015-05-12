@@ -1,6 +1,4 @@
-
 # Configure space and resources
-
 <img src="images/dev_process_2.png" width="200" align="right">
 
 The first step in the creation of any macroworld is the configuration of the physical space of the classroom and the resources (i.e. devices) that we are going to use to manifest the simulation in the classroom. In other words we need to tell our macroworld simulation where are the devices that we are going to use in this simulation. 
@@ -85,7 +83,9 @@ Once you are done adding beacons to the system you can go back to the classroom 
 Using the "+" button we can now add as many as we need to our application. Suppose we have n = 10 kids in our classroom, one beacon per kid, and so we are going to add 10 beacons. As you see this is reflected in the list of resources which now features 10 beacons.
 
 ### Step 3: configuring tracking
-As you might have already noticed all the beacons listed under resources have a <img src="images/rp_disable.png" width="50"> button next to them. This means that, even if we added them to the macroworld, they have not been activated yet. I order to activate them all we have to do is to click on the <img src="images/rp_disable.png" width="50"> button and choose "proximity".
+As you might have already noticed all the beacons listed under resources have a <img src="images/rp_disable.png" width="50"> button next to them. This means that, even if we added them to the macroworld, they have not been activated yet. I order to activate them all we have to do is to click on the <img src="images/rp_disable.png" width="50"> button and choose "proximity" from the drop down.
+
+<img src="images/rp_choose_proximity.png" width="250">
 
 However, for beacons to work correctly, we need to define a series of "proximity areas" around static resources for beacons to be detected. In order to do this we need to click once again on the <img src="images/rp_v_btn.png" width="30"> button next to static resources and change the "proximity" value which represents the detection radius of the static resource. For the Hunger Games simulation we'll set it to 0.7 for all our patches. As you see, as soon as you do so, the map displays a blue circle around static resource, indicating that a proximity detection radius has been activated for the resource. Your interface should look something like this at this point.
 

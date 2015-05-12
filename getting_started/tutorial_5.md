@@ -1,6 +1,4 @@
-
 # Create interface (front-end)
-
 <img src="images/dev_process_3.png" width="200" align="right">
 
 One of the nicest features nutella provides its user is the ability to create a macroworld application simply creating its individual components and "forget" about all the plumbing between them. There are two different components types in nutella: bots and interfaces. Bots are "back-end" components and are used to power simulations, aggregate data, calculate things, etc. Interfaces are "front-end" components and are used by users to interact with the macroworld.

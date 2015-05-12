@@ -1,7 +1,6 @@
+# Deploy in classroom(s)
 
-# Data analysis
-
-<img src="images/dev_process_7.png" width="200" align="right">
+<img src="images/dev_process_6.png" width="200" align="right">
 
 
 

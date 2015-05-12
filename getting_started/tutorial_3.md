@@ -1,6 +1,4 @@
-
 # Creating the macroworld skeleton
-
 <img src="images/dev_process_1.png" width="200" align="right">
 
 The first step to create our Hunger Games macroworld is to create the nutella application skeleton. Similar to what we did in our "instant gratification" all we have to do is:
