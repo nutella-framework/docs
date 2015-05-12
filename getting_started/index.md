@@ -8,8 +8,8 @@ nutella is written in ruby but it uses a bunch of other technologies that need t
 1. _ruby_ (version >= 2.1.0). Do yourself a favor and use [RVM](https://rvm.io/rvm/install) to install Ruby both on OSX and Ubuntu.
 1. _git_ (version >= 1.8.0). Do yourself a favor and use [Homebrew](http://brew.sh/) to install git, if you are on OSX. You can use apt-get on Ubuntu.
 1. _tmux_ (version >= 1.8.0). Do yourself a favor and use [Homebrew](http://brew.sh/) to install tmux, if you are on OSX. You can use apt-get on Ubuntu.
+1. _MongoDB server_ (version >= 2.6.9). You'll need MongoDB in order to power `nutella.persist` and store log data. If you are on OSX use [Homebrew](http://brew.sh/). On Ubuntu you might want to avoid `apt-get` and use [this method](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/) instead.
 1. _node.js_ (version >= 0.10.10). Yes, really, you need to install node becaue we use it to run the broker that handles all communication between all the framework components. Do yourself a favor and use [Homebrew](http://brew.sh/) to install node, if you are on OSX and On Ubuntu you can [choose your favorite method](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server). We like [nvm](https://github.com/creationix/nvm).
-1. _MongoDB server_ (optional, reccommended). You'll need MongoDB if you want to use it with `nutella.persist`. If you are on OSX use [Homebrew](http://brew.sh/). On Ubuntu you might want to avoid `apt-get` and use [this method](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/) instead.
 
 
 # Installing nutella
