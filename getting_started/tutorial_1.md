@@ -29,6 +29,8 @@ Open your web browser and go to `http://localhost:57880/my_macroworld_app/defaul
 <img src="images/main_interface.png">
 So many buttons! :) Each one of them is a GUI that will help you during the development of your macroworld application. Curious about what each of those buttons does? Keep reading! Wanna tinker for a bit first? Go ahead!
 
+**Important: this interface is called _main interface_. We'll refer to this interface a lot through this guide.**
+
 If you are wondering: "How do I stop this application thing now?" the answer is as easy as 
 ```
 $ nutella stop
