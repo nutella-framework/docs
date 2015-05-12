@@ -47,7 +47,7 @@ For our Hunger Games simulation we will have to add 6 food patches. We'll call t
 ```
 - patch-a: (2, 6.6)
 - patch-b: (7, 6.6)
-- patch-c: (9.5, 3.35)
+- patch-c: (9.5, 5.35)
 - patch-d: (9.5, 2.2)
 - patch-e: (8.2, 0.4)
 - patch-f: (5.7, 0.4)
