@@ -69,9 +69,9 @@ Adding beacons to our macroworld application is a thee-steps process: adding the
 The fist thing we need to do to add beacons to our macroworld is to add the beacons to nutella (unless someone already did that for us). In order to do this we need to use a different interface provided by nutella called **RoomPlaces (BeaconCloud)**. To start it, go back to the main interface (the one with all the red buttons that say "Launch", remember?) and click on the "Launch button" next to RoomPlaces (BeaconCloud). This will launch an interface that will look something like this.
 <img src="images/rp_beacon_cloud_empty.png">
 
-Depending on the type of iBeacon you are using, you'll need to use the vendor-provided tools to read the UUID, major and minor and enter them into the Beacon Cloud interface together with a unique identifier which will be used in the main RoomPlaces interfaces and everywhere else in the nutella framework. Beacon cloud basically acts as a repository of iBeacon devices that is vendor-independent and specific to each installation of nutella. If you want to know more about UUIC, major, minor and beacon cloud, check out our [beacon cloud page](). 
+Depending on the type of iBeacon you are using, you'll need to use the vendor-provided tools to read the UUID, major and minor and enter them into the Beacon Cloud interface together with a unique identifier which will be used in the main RoomPlaces interfaces and everywhere else in the nutella framework. Beacon cloud basically acts as a repository of iBeacon devices that is vendor-independent and specific to each installation of nutella. If you want to know more about UUIC, major, minor and beacon cloud, check out our [beacon cloud page](../in-depth/roomplaces-beacon-cloud.md). 
 
-It is also possible to use almost all Bluetooth LE readers (such as iPads) as iBeacons as well. If you are interested in knowing more about this, check out our [virtual beacons page]().
+It is also possible to use almost all Bluetooth LE readers (such as iPads) as iBeacons as well. If you are interested in knowing more about this, check out our [virtual beacons page](../in-depth/roomplaces-virtual-beacons.md).
 
 Once you have added a bunch of beacons to your beacon cloud it should look something like this.
 

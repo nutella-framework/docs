@@ -21,7 +21,7 @@ This command will install all the files of `basic-web-interface` inside the `int
 
 <img src="images/patch_int_1.png">
 
-Ok, it works, now what? How do you change things? Just fire up your favorite editor (who said Sublime?) and start to tinker with `index.html`! But we are trying to create a patch interface for the hunger games remember? So how do we go about it? Read on to find out! However, if you want to find out more about RoomComponents and how to use them, read our [RoomComponents page]().
+Ok, it works, now what? How do you change things? Just fire up your favorite editor (who said Sublime?) and start to tinker with `index.html`! But we are trying to create a patch interface for the hunger games remember? So how do we go about it? Read on to find out! However, if you want to find out more about RoomComponents and how to use them, read our [RoomComponents page](../in-depth/roomcomponents.md).
 
 
 ## Creating `patch-interface`
