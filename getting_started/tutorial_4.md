@@ -60,7 +60,7 @@ Once you are done the interface should look something like this.
 ## Adding dynamic resources
 Now that we are done adding the static resources it's time to add the dynamic ones. RoomPlaces distinguishes among two different kinds of dynamic resource: the ones that are capable of "sensing" their location and the ones that can't. Resources that can sense their location use iBeacon technology to detect their proximity to other (static) resources. Since they have "super-powers" iBeacon-powered resources are treated separately.
 
-In Hunger Games we are luck and all dynamic resources are iBeacon powered so we don't need to add any dynamic resources manually but we can use the facilities that nutella provides for iBeacons technology. If you want to know more about non-beacon dynamic resources, check out our [dynamic resources page]().
+In Hunger Games we are luck and all dynamic resources are iBeacon powered so we don't need to add any dynamic resources manually but we can use the facilities that nutella provides for iBeacons technology. If you want to know more about non-beacon dynamic resources, check out our [dynamic resources page](../in-depth/roomplaces-dynamic-resources.md).
 
 ## Adding beacons
 Adding beacons to our macroworld application is a thee-steps process: adding the beacon to the system using the RoomPlace Beacon Cloud interface, adding the beacons to the macroworld application using the RoomPlaces Classroom layout interface and configuring the tracking system.
