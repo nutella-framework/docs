@@ -93,18 +93,18 @@ However, for beacons to work correctly, we need to define a series of "proximity
 
 
 ## Testing
-Now that out classroom setup is complete we are ready for some testing. Luckily this doesn't mean we actually have to deploy iPads, and run around with real iBeacons because we can use the build in simulator that nutella provides. In order to do so simply head to 
+Now that out classroom setup is complete we are ready for some testing. Luckily this doesn't mean we actually need to deploy iPads, and run around with real iBeacons but we can use the build in simulator that nutella provides. In order to do so simply head back to the nutella main interface, start Room Debugger and scroll all the way down to the bottom to the RoomPlaces simulator. 
 
-**... finish once the GUI for the simulator is built...**
+<img src="images/rp_sim.png">
 
-Your RoomPlaces classroom layout interface should start blinking all over the places with circles, like the picture below.
+As you see, the beacons and hotsposts arrays have been already fetched and all you have to do is hit the "Start simulator" button. If you go back to your RoomPlaces classroom layout interface you should see it start blinking all over the places with circles, like the picture below.
 
 <img src="images/rp_w_beacons.png">
 
-Each circle represents a beacon (i.e. a kid). 
+Each circle represents a beacon (i.e. a kid) and as you see they are moving from one patch to the other and their movement is being detected by roomplaces.
 
 
-# Next...
+# Next
 As you might have noticed we left quite a bit behind about RoomPlaces. If you want to keep reading about it, follow the links in this page, otherwise if you are anxious to keep building, keep reading the tutorial. Next up, creating out first interface. 
 
 
