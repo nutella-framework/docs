@@ -25,11 +25,11 @@ Once we have created our three channels, we can now decide who can see what: we 
 
 The package creator interface is divided into three main sections:
 <ul>
-    <li> *Channels Catalogue*: the catalogue of all the available channels that we have just created from the dedicated interface. The catalogue is updated in real-time when channels are modified from the channel-creation interface.
+    <li> **Channels Catalogue**: the catalogue of all the available channels that we have just created from the dedicated interface. The catalogue is updated in real-time when channels are modified from the channel-creation interface.
     </li> 
-    <li> *Packages mappings*: the main functionality of the whole package creation. It allows to create, rename and delete packages, i.e. rows of the table. A *RoomCast package* is a container of available channels: the kids from their iPad RoomCast apps will be able to login with a specific package name (which acts as their identity) and see only the list of channels which have been assigned to that package through the package creator interface.
+    <li> **Packages mappings**: the main functionality of the whole package creation. It allows to create, rename and delete packages, i.e. rows of the table. A **RoomCast package** is a container of available channels: the kids from their iPad RoomCast apps will be able to login with a specific package name (which acts as their identity) and see only the list of channels which have been assigned to that package through the package creator interface.
     </li>
-    <li> *Activities dropdown*: this all-in-one dropdown menu allows to create, delete or rename activitites for the classroom. A *RoomCast activity* is a set of packages mappings. Different activities will possibly have different packages with their associated channels.  Activities can then be launched from the RoomCast teacher interface.
+    <li> **Activities dropdown**: this all-in-one dropdown menu allows to create, delete or rename activitites for the classroom. A **RoomCast activity** is a set of packages mappings. Different activities will possibly have different packages with their associated channels.  Activities can then be launched from the RoomCast teacher interface.
     </li>
 </ul>
 
