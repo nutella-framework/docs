@@ -54,11 +54,11 @@ var n_squirrels_at_patch = 0;
 nutella.location.resource['patch-a'].notifyEnter = true;
 nutella.location.resource['patch-a'].notifyExit = true;
 nutella.location.resourceEntered(function(beacon, patch) {
-    if (patch=='patch-a')
+    if (patch.rid === 'patch-a')
         n_squirrels_at_patch++;
 });
 nutella.location.resourceExited(function(beacon, patch) {
-    if (patch=='patch-a')
+    if (patch.rid === 'patch-a')
         n_squirrels_at_patch--;
 });
 ```
@@ -85,12 +85,16 @@ nutella.location.ready(function(){
     nutella.location.resource['patch-a'].notifyExit = true;
     // Update calories_per_second on arrival/departures
     nutella.location.resourceEntered(function(beacon, patch) {
-    n_squirrels_at_patch++;
-    calories_per_second = n_squirrels_at_patch==0 ? richness : richness / n_squirrels_at_patch;
+    if (patch.rid === 'patch-a') {
+        n_squirrels_at_patch++;
+        calories_per_second = n_squirrels_at_patch==0 ? richness : richness / n_squirrels_at_patch;
+    }
     });
     nutella.location.resourceExited(function(beacon, patch) {
-    n_squirrels_at_patch--;
-  calories_per_second = n_squirrels_at_patch==0 ? richness : richness / n_squirrels_at_patch;
+    if (patch.rid === 'patch-a') {
+        n_squirrels_at_patch--;
+        calories_per_second = n_squirrels_at_patch==0 ? richness : richness / n_squirrels_at_patch;
+    }
     });
 });
 ```
