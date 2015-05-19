@@ -15,9 +15,11 @@ Not much to see you say? You are absolutely right! Remember? Our macroworld is p
 
 Head back to Room Debugger and send a `start_foraging_bout` message to the bot. How? Like this!
 
-<img src="images/7_send_start.png" width="200" align="right">
+<img src="images/7_send_start.png" width="500">
 
+Now, scroll down the page and start the simulator. Open up our `patch-interface` and you should see how the number of calories per minute changes based on how many "kids" are at the patch. Open the `aggregate interface` and you should be able to see the stats. Once you are tired of playing around, just send a `stop_foraging_bout` message to our bot and kill the simulator. That's it! You just simulated a foraging bout!
 
+## Next
 Now that all our components have been created and tested we are ready to plan our classroom deployment and bundle up our components in a way that will make it easy for our users (kids and teachers in the classroom) to use. 
 
 
