@@ -1,9 +1,10 @@
 # Data analysis
 <img src="images/dev_process_7.png" width="200" align="right">
 
-Once students and teachers used our application, there will be plenty of data for us to analyze. In order to retrieve those data we have to...
-
 ## Retrieving data a posteriori
+Once students and teachers used our application, there will be plenty of data for us to analyze. In order to retrieve those data we simply have to head to the MongoDB that was running on the same machine where nutella served the application. Using your favorite tool, I dig [Robomongo](http://robomongo.org/), connect to the database called `nutella` and to the collection called `dump`. That's it
+
+
 
 Bulk APIs
 
