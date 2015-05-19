@@ -155,6 +155,10 @@ nutella.net.subscribe('start_foraging_bout', function(message, from) {
 nutella.net.subscribe('stop_foraging_bout', function(message, from) {
     foraging = false;
     scores.save();
+    // Clearing intervals to stop counting up
+    Object.keys(timers).forEach(function(t) {
+        clearInterval(timers[t]);
+    });
 });
 
 // Subscribes to all enter and exit events for all beacons and 
