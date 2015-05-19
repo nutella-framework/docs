@@ -12,7 +12,7 @@ Installed template: basic-node-bot as stats-bot
 Since we are installing a bot component and not an interface component the files for our `stats-bot` will be created in `bots/stats-bot`. 
 
 ## Installing dependencies for your bot
-Since this bot has been written in node.js it uses `npm` to manage dependencies. In order to intall the dependencies for this all all the other bots you can do
+Since this bot has been written in node.js it uses `npm` to manage dependencies. In order to intall the dependencies for this and all the other bots you can do
 
 ```
 $ nutella dependencies
@@ -80,7 +80,7 @@ nutella.net.subscribe('stop_foraging_bout', function(message, from) {
 });
 ```
 
-After star/stop bout we need to subscribe to arrival and departures. Similarly to what we did for our `patch-interface` we simply set `notifyEnter` and `notifyExit` to `true` for all static resources. In order to do that we download the list of resources, filter the static ones (`filter`), extract their resource id (`map`) and then iterate the array of resource ids (`forEach`) and subscribe. 
+After the star/stop bout messages, we need to subscribe to arrival and departures. Similarly to what we did for our `patch-interface` we simply set `notifyEnter` and `notifyExit` to `true` for all static resources. In order to do that we download the list of resources, filter the static ones (`filter`), extract their resource id (`map`) and then iterate the array of resource ids (`forEach`) and subscribe. 
 ```js
 // Subscribes to all enter and exit events for all beacons and 
 // register callbacks for these events
