@@ -33,10 +33,19 @@ Once we have created our two channels, we can now decide who can see what: we wa
 
 The package creator interface is divided into three main sections:
 
-- **Channels Catalogue**: the catalogue of all the available channels that we have just created from the dedicated interface. The catalogue is updated in real-time when channels are modified from the channel-creation interface.
+- **Channels Catalogue** (right half): the catalogue of all the available channels that we have just created from the dedicated interface. The catalogue is updated in real-time when channels are modified from the channel-creation interface.
 
-- **Packages mappings**: the main functionality of the whole package creation. It allows to create, rename and delete packages, i.e. rows of the table. A **RoomCast package** is a container of available channels: the kids from their iPad RoomCast apps will be able to login with a specific package name (which acts as their identity) and see only the list of channels which have been assigned to that package through the package creator interface.
+- **Packages mappings** (left half): the main functionality of the whole package creation. It allows to create, rename and delete packages, i.e. rows of the table. A **RoomCast package** is a container of available channels: the kids from their iPad RoomCast apps will be able to login with a specific package name (which acts as their identity) and see only the list of channels which have been assigned to that package through the package creator interface.
 
-- **Activities dropdown**: this all-in-one dropdown menu allows to create, delete or rename activitites for the classroom. A **RoomCast activity** is a set of packages mappings. Different activities will possibly have different packages with their associated channels.  Activities can then be launched from the RoomCast teacher interface.
+- **Activities dropdown** (top): this all-in-one dropdown menu allows to create, delete or rename activitites for the classroom. A **RoomCast activity** is a set of packages mappings. Different activities will possibly have different packages with their associated channels.  Activities can then be launched from the RoomCast teacher interface.
+
+## Hunger games
+In the hunger games we have six patches and therefore we'll create six iPad packages with simpley our patch interface called, with no fantasy, `patch-a`, ... Moreover, we're gonna create another package that we are gonna call `ambient-display` with just our `aggregate-interface`. The interface should look something like this.
+
+<img src="images/rc_pc_1.png">
+
+
+## Next
+Now we are really ready for running in the classroom. Let's see how we get there! 
 
 [:arrow_backward: PREV](tutorial_7.md) | [NEXT :arrow_forward:](tutorial_9.md)
