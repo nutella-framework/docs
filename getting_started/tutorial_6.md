@@ -11,6 +11,14 @@ Installed template: basic-node-bot as stats-bot
 
 Since we are installing a bot component and not an interface component the files for our `stats-bot` will be created in `bots/stats-bot`. 
 
+## Installing dependencies for your bot
+Since this bot has been written in node.js it uses `npm` to manage dependencies. In order to intall the dependencies for this all all the other bots you can do
+
+```
+$ nutella dependencies
+```
+and this will exectute the `dependencies` script inside each component in your application. In the case of `stats bot` this script will simply execute `npm install`, which is the standard npm command to install dependencies.
+
 
 ## Starting and monitoring your bot
 
@@ -37,10 +45,160 @@ When you type `nutella start`, the framework automatically starts all your bots 
 Now that we learned how to monitor our bot let's start to tinker with it!
 
 ## Implementing `stats-bot`
-In order to collect the total amount of calories accumulated by each student we will need to set the beginning and ending of the collection time (using a message sent to the bot) and then use the arrival/departure events to calculate the amount of time spent at each patch. Let's see how to do that.
+In order to collect the total amount of calories accumulated by each student we will need to set the beginning and ending of the collection time (using a message sent to the bot) and then use the arrival/departure events to calculate the amount of time spent at each patch. Let's see how to do that. 
+
+The first bit is really the usual nutella initialization stuff. Then we declare some variables. One of them is special: `scores`. This object is actually linked to a JSON file. The object has two methods `load()` and `save()` that load and persist the content of the object to the JSON file respectively. This is the way nutella simplifies storage operations.
+```js
+var NUTELLA = require('nutella_lib');
+
+// Get configuration parameters and init nutella
+var cliArgs = NUTELLA.parseArgs();
+var componentId = NUTELLA.parseComponentId();
+var nutella = NUTELLA.init(cliArgs.broker, cliArgs.app_id, cliArgs.run_id, componentId);
+
+// State
+var foraging = false;   // Boolean variables that indicates if we are foraging or not
+var timers = {};        // Stores the timers used to calculate the score
+
+// Persistence (to file)
+// Stores the scores for all beacons in the format {"beacon10":8,"beacon5":23, ... ,"beacon1":22}
+var scores = nutella.persist.getJsonObjectStore('scores');
+```
 
 
-**... finish nulla_lib.js ...**
+Then it's time to subscribe to the events that are going to signal the bot that foraging has started and stopped. When the foraging bout stops we call `save()` and we store the scores of students. 
+```javascript
+// Handles the starting of the foraging bot
+nutella.net.subscribe('start_foraging_bout', function(message, from) {
+    foraging = true;
+});
+
+// Handles the end of the foraging bot
+nutella.net.subscribe('stop_foraging_bout', function(message, from) {
+    foraging = false;
+    scores.save();
+});
+```
+
+After star/stop bout we need to subscribe to arrival and departures. Similarly to what we did for our `patch-interface` we simply set `notifyEnter` and `notifyExit` to `true` for all static resources. In order to do that we download the list of resources, filter the static ones (`filter`), extract their resource id (`map`) and then iterate the array of resource ids (`forEach`) and subscribe. 
+```js
+// Subscribes to all enter and exit events for all beacons and 
+// register callbacks for these events
+nutella.location.ready(function() {
+    var patches = nutella.location.resources.filter(function(el){
+        return el.type==='STATIC';
+    }).map(function(el){
+        return el.rid;
+    }).forEach(function(rid) {
+        nutella.location.resource[rid].notifyEnter = true;
+        nutella.location.resource[rid].notifyExit = true;
+    });
+    nutella.location.resourceEntered(beaconEntered);
+    nutella.location.resourceExited(beaconExited);
+});
+```
+
+When subscribing to arrival/departures events we have to specify callbacks that are fired whenever the events occur. Here we simply register a timer that gives students a point for each second they sit in a patch. Not quite the sophisticated algorithm used in Hunger Games but for our purposes it will do! :smiley: Notice how events fired outside the foraging period are discarder.
+```js
+// Fired whenever a beacon enters a patch
+function beaconEntered(beacon, patch) {
+    if (foraging) {
+        timers[beacon.rid] = setInterval(function() {
+            if (scores[beacon.rid]===undefined)
+                scores[beacon.rid] = 1;
+            else
+                scores[beacon.rid] = scores[beacon.rid] + 1;
+        },1000);
+    }
+}
+
+// Fired whenever a beacon exists a patch
+function beaconExited(beacon, patch) {
+    if (foraging) {
+        clearInterval(timers[beacon.rid]);
+    }
+}
+```
+
+The last bit is simply providing a way for other components to access the scores calculated by out `stats-bot`. Here all we have to do is to use the `handle_request` function provided by `nutella.net` and, in the callback, simply return our scores object.
+```js
+//  Handles the requests for the stats of all students
+nutella.net.handle_requests('complete_stats', function(message, from) {
+    return scores;
+});
+```
+
+Putting the whole thing together, this is what we get. 
+
+```js
+var NUTELLA = require('nutella_lib');
+
+// Get configuration parameters and init nutella
+var cliArgs = NUTELLA.parseArgs();
+var componentId = NUTELLA.parseComponentId();
+var nutella = NUTELLA.init(cliArgs.broker, cliArgs.app_id, cliArgs.run_id, componentId);
+
+// State
+var foraging = false;   // Boolean variables that indicates if we are foraging or not
+var timers = {};        // Stores the timers used to calculate the score
+
+// Persistence (to file)
+// Stores the scores for all beacons in the format {"beacon10":8,"beacon5":23, ... ,"beacon1":22}
+var scores = nutella.persist.getJsonObjectStore('scores');
+
+// Handles the starting of the foraging bot
+nutella.net.subscribe('start_foraging_bout', function(message, from) {
+    foraging = true;
+});
+
+// Handles the end of the foraging bot
+nutella.net.subscribe('stop_foraging_bout', function(message, from) {
+    foraging = false;
+    scores.save();
+});
+
+// Subscribes to all enter and exit events for all beacons and 
+// register callbacks for these events
+nutella.location.ready(function() {
+    var patches = nutella.location.resources.filter(function(el){
+        return el.type==='STATIC';
+    }).map(function(el){
+        return el.rid;
+    }).forEach(function(rid) {
+        nutella.location.resource[rid].notifyEnter = true;
+        nutella.location.resource[rid].notifyExit = true;
+    });
+    nutella.location.resourceEntered(beaconEntered);
+    nutella.location.resourceExited(beaconExited);
+});
+
+// Fired whenever a beacon enters a patch
+function beaconEntered(beacon, patch) {
+    if (foraging) {
+        timers[beacon.rid] = setInterval(function() {
+            if (scores[beacon.rid]===undefined)
+                scores[beacon.rid] = 1;
+            else
+                scores[beacon.rid] = scores[beacon.rid] + 1;
+        },1000);
+    }
+}
+
+// Fired whenever a beacon exists a patch
+function beaconExited(beacon, patch) {
+    if (foraging) {
+        clearInterval(timers[beacon.rid]);
+    }
+}
+
+//  Handles the requests for the stats of all students
+nutella.net.handle_requests('complete_stats', function(message, from) {
+    return scores;
+});
+```
+
+## Next
+That wasn't that bad, was it? Now let's finish our application and let's see how we can get an interface to display the stats calculated by this bot.
 
 
 [:arrow_backward: PREV](tutorial_5.md) | [NEXT :arrow_forward:](tutorial_7.md)
