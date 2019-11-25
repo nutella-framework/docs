@@ -142,9 +142,34 @@ A publish will look something like this:
 ```
 `from` and `payload` follow the same rules of request and response above, while `type` is always `publish`.
 
+# RPC Protocol
+Nutella is built a client-server application. The nutella CLI does nothing more than sending RPC requests to the server using the nutella protocol (on top of MQTT). The choice of using nutella protocol instead of bare MQTT is dictated by the fact that we want to leverage all the niceties that the nutella protocol gives us.
+
+All RPCs are sent as _requests/responses_ over the _framework level_  `commands` channel.
+
+Requests are essentially command names with options (did you say command line flags?) and look like this
+```
+{
+  "command": "start",
+  "opts": {
+    "option_name": "option_value"
+  }
+}
+```
+Each request is matched by a response in the following format.
+```
+{
+  "success": true,
+  "message": "What to display to the user",
+  "message_type": "error",
+  "exception": "blob of text that contains the stacktrace"
+}
+```
+Three fields, `success`, `message`, and `message_level` are always included, `exception` is optional and is only includeded if `success` is `false`. `message_level` indicates wether the message is `info`, `success`, `debug`, `warn`, or `error`.
+
 # TODO
 Talk about how higher level functionality is implemented on top of this basic stuff
 - Metadata about nutella
 - Run lists, app lists, etc.
-- Storage
+- Storage (K/V etc.)
 - Logging, etc, etc.
